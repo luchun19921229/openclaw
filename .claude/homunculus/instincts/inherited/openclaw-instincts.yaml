@@ -1,0 +1,356 @@
+# Instincts generated from https://github.com/luchun19921229/openclaw
+# Generated: 2026-05-11T08:28:06.433Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: openclaw-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: 修复远程服务器OpenClaw连接
+
+---
+id: openclaw-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Commit Length
+
+## Action
+
+Keep commit messages concise (~23 characters)
+
+## Evidence
+
+- Average commit message length: 23 chars
+- Based on 1 commits
+
+---
+id: openclaw-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: openclaw-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: openclaw-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: openclaw-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/luchun19921229/openclaw
+---
+
+# Openclaw Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: openclaw-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct File Naming
+
+## Action
+
+Name the file using kebab-case
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: openclaw-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Function Naming
+
+## Action
+
+Use camelCase for the function name
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: openclaw-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Class Naming
+
+## Action
+
+Use PascalCase for the class name
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: openclaw-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for the constant name
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: openclaw-instinct-import-style
+trigger: "When importing modules within the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: openclaw-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: openclaw-instinct-commit-format
+trigger: "When writing a git commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Commit Format
+
+## Action
+
+Start the message with 'feat:' followed by a brief description
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commit: feat: 修复远程服务器OpenClaw连接
+
+---
+id: openclaw-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 23 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: openclaw-instinct-try-catch-errors
+trigger: "When handling errors in code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style
+
+---
+id: openclaw-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from the source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: openclaw-instinct-src-folder
+trigger: "When adding new source code"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Src Folder
+
+## Action
+
+Place source code inside the 'src' directory
+
+## Evidence
+
+- Pattern in architecture.folderStructure.commonFolders
+
+---
+id: openclaw-instinct-agents-folder
+trigger: "When creating or organizing agent-related code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: luchun19921229/openclaw
+---
+
+# Openclaw Instinct Agents Folder
+
+## Action
+
+Place agent code inside the 'agents' folder within 'src'
+
+## Evidence
+
+- Pattern in architecture.folderStructure.srcLayout
+
