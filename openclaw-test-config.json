@@ -1,0 +1,54 @@
+{
+  "agents": {
+    "defaults": {
+      "model": "minimax/MiniMax-M2.7",
+      "workspace": "/root/.openclaw/workspace"
+    }
+  },
+  "models": {
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "api": "openai-completions",
+        "apiKey": "sk-cp-tHHnpXUMDrmFd_RRJvDPSZjeuwkXn7zvvNCXTizkkEmuvO9cRIMCPuLcfaGFrdHrdZcnQbLaxHHa_O02rp4XNnyg81pP4hii4cs6edn-3Q9amChCvi6x-4g",
+        "models": [
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 15,
+              "output": 60,
+              "cacheRead": 2,
+              "cacheWrite": 10
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16384,
+            "compat": {
+              "maxTokensField": "max_completion_tokens"
+            }
+          },
+          {
+            "id": "MiniMax-VL-01",
+            "name": "MiniMax VL 01",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": {
+              "input": 15,
+              "output": 60,
+              "cacheRead": 2,
+              "cacheWrite": 10
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.1.29",
+    "lastTouchedAt": "2026-05-09T23:26:02.155Z"
+  }
+}

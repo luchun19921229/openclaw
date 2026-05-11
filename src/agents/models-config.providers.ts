@@ -17,11 +17,11 @@ import { discoverVeniceModels, VENICE_BASE_URL } from "./venice-models.js";
 type ModelsConfig = NonNullable<OpenClawConfig["models"]>;
 export type ProviderConfig = NonNullable<ModelsConfig["providers"]>[string];
 
-const MINIMAX_API_BASE_URL = "https://api.minimax.chat/v1";
-const MINIMAX_DEFAULT_MODEL_ID = "MiniMax-M2.1";
+const MINIMAX_API_BASE_URL = "https://api.minimaxi.com/v1";
+const MINIMAX_DEFAULT_MODEL_ID = "MiniMax-M2.7";
 const MINIMAX_DEFAULT_VISION_MODEL_ID = "MiniMax-VL-01";
 const MINIMAX_DEFAULT_CONTEXT_WINDOW = 200000;
-const MINIMAX_DEFAULT_MAX_TOKENS = 8192;
+const MINIMAX_DEFAULT_MAX_TOKENS = 16384;
 // Pricing: MiniMax doesn't publish public rates. Override in models.json for accurate costs.
 const MINIMAX_API_COST = {
   input: 15,
@@ -259,12 +259,15 @@ function buildMinimaxProvider(): ProviderConfig {
     models: [
       {
         id: MINIMAX_DEFAULT_MODEL_ID,
-        name: "MiniMax M2.1",
+        name: "MiniMax M2.7",
         reasoning: false,
         input: ["text"],
         cost: MINIMAX_API_COST,
         contextWindow: MINIMAX_DEFAULT_CONTEXT_WINDOW,
         maxTokens: MINIMAX_DEFAULT_MAX_TOKENS,
+        compat: {
+          maxTokensField: "max_completion_tokens",
+        },
       },
       {
         id: MINIMAX_DEFAULT_VISION_MODEL_ID,
